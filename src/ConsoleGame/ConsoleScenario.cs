@@ -1,5 +1,5 @@
 using RoleplayGame.Characters;
-using RoleplayGame.Items;
+using RoleplayGame;
 using RoleplayGame.Encounters;
 using RoleplayGame.Scenarios;
 using System.Collections.Generic;

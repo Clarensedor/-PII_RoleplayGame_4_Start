@@ -1,5 +1,5 @@
 using RoleplayGame.Characters;
-using RoleplayGame.Items;
+using RoleplayGame;
 
 namespace RoleplayGame.Encounters
 {

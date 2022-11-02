@@ -1,6 +1,6 @@
 using System;
 using RoleplayGame.Characters;
-using RoleplayGame.Items;
+using RoleplayGame;
 using RoleplayGame.Encounters;
 
 namespace Program
