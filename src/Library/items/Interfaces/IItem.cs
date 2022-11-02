@@ -5,5 +5,6 @@ namespace RoleplayGame
     /// </summary>
     public interface IItem
     {
+        int id {get;}
     }
 }
