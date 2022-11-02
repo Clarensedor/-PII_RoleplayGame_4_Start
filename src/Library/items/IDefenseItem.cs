@@ -1,4 +1,4 @@
-namespace RoleplayGame.Items
+namespace RoleplayGame
 {
     /// <summary>
     /// Interfaz que permite crear elementos de defensa.
@@ -9,6 +9,6 @@ namespace RoleplayGame.Items
         /// El poder de defensa.
         /// </summary>
         /// <value>Poder de defensa</value>
-        int DefensePower{ get; }
+        int DefenseValue{ get; }
     }
 }

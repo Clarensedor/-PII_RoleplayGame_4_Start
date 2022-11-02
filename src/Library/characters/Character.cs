@@ -88,7 +88,7 @@ namespace RoleplayGame.Characters
                 {
                     if (item is IAttackItem)
                     {
-                        attackPower += ((IAttackItem) item).AttackPower;
+                        attackPower += ((IAttackItem) item).AttackValue;
                     }
                 }
                 return attackPower;
@@ -108,7 +108,7 @@ namespace RoleplayGame.Characters
                 {
                     if (item is IDefenseItem)
                     {
-                        defensePower += ((IDefenseItem) item).DefensePower;
+                        defensePower += ((IDefenseItem) item).DefenseValue;
                     }
                 }
                 return defensePower;
