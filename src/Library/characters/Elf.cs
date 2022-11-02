@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using RoleplayGame.Items;
+using RoleplayGame;
 
 namespace RoleplayGame.Characters
 {
