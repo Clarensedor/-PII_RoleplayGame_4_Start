@@ -1,4 +1,4 @@
-namespace RoleplayGame.Items
+namespace RoleplayGame
 {
     /// <summary>
     /// Magia. Permite atacar y defender.
@@ -9,7 +9,7 @@ namespace RoleplayGame.Items
         /// El poder de ataque
         /// </summary>
         /// <value></value>
-        public int AttackPower
+        public int AttackValue
         {
             get
             {
@@ -21,7 +21,7 @@ namespace RoleplayGame.Items
         /// El poder de defensa
         /// </summary>
         /// <value></value>
-        public int DefensePower
+        public int DefenseValue
         {
             get
             {

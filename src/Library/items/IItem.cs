@@ -1,4 +1,4 @@
-namespace RoleplayGame.Items
+namespace RoleplayGame
 {
     /// <summary>
     /// Interfaz para crear elementos.

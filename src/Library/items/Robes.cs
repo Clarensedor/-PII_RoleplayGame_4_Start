@@ -1,4 +1,4 @@
-namespace RoleplayGame.Items
+namespace RoleplayGame
 {
     /// <summary>
     /// Túnica. Permite defenderse levemente.
@@ -9,7 +9,7 @@ namespace RoleplayGame.Items
         /// El poder de defensa.
         /// </summary>
         /// <value></value>
-        public int DefensePower
+        public int DefenseValue
         {
             get
             {
