@@ -5,6 +5,7 @@ namespace RoleplayGame
     /// </summary>
     public class Robes : IDefenseItem
     {
+         int id = 11;
         /// <summary>
         /// El poder de defensa.
         /// </summary>
