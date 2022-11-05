@@ -2,7 +2,6 @@ namespace RoleplayGame
 {
     public class Axe: IAttackItem
     {
-        int id = 1;
 
         public int AttackValue 
         {
@@ -10,6 +9,13 @@ namespace RoleplayGame
             {
                 return 25;
             } 
+        }
+        public int id
+        {
+            get
+            {
+                return 1;
+            }
         }
     }
 }

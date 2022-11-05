@@ -17,6 +17,14 @@ namespace RoleplayGame
             }
         }
 
+        public int id
+        {
+            get
+            {
+                return 16;
+            }
+        }
+
         /// <summary>
         /// El poder de defensa
         /// </summary>

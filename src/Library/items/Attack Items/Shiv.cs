@@ -9,5 +9,12 @@ namespace RoleplayGame
                 return 15;
             } 
         }
+        public int id 
+        {
+            get
+            {
+                return 15;
+            } 
+        }
     }
 }

@@ -2,13 +2,20 @@ namespace RoleplayGame
 {
     public class Stone: IAttackItem
     {
-        int id = 6;
         
         public int AttackValue 
         {
             get
             {
                 return 5;
+            } 
+        }
+
+        public int id 
+        {
+            get
+            {
+                return 6;
             } 
         }
     }
