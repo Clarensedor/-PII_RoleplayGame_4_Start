@@ -9,7 +9,6 @@ namespace RoleplayGame.Characters
         Wizard = 2,
         Human = 3,
         Troll = 4,
-
         Necromancer = 5
     }
 
