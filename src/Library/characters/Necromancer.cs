@@ -6,14 +6,13 @@ namespace RoleplayGame.Characters
     /// <summary>
     /// Personaje Elfo
     /// </summary>
-    public class Troll : Character
+    public class Necromancer : Character
     {
-        public Troll(string name)
+        public Necromancer(string name)
             : base(name)
         {
-            this.Health = 200;
-            this.AddItem(new Stick());
-            this.AddItem(new BreastPlate());
+            this.Health = 50;
+           // this.AddItem();
         }
     }
 }

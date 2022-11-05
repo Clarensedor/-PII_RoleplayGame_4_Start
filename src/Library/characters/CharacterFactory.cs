@@ -6,7 +6,11 @@ namespace RoleplayGame.Characters
     public enum CharacterType
     {
         Elf = 1,
-        Wizard = 2
+        Wizard = 2,
+        Human = 3,
+        Troll = 4,
+
+        Necromancer = 5
     }
 
     /// <summary>

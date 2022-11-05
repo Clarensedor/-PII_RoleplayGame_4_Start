@@ -19,14 +19,14 @@ namespace RoleplayGame
         public void AttachGem(IGemstone gem){
             this.gemNotch = gem;
             this.AttackValue += gem.value;
+            this.gemstoneNotchIsUsed = true;
 
         }
 
         public void DeAttachGem(){
             this.AttackValue -= gemNotch.value;
-            this.gemNotch = null;
-            
-            
+            this.gemstoneNotch = null;
+
         }
 
         

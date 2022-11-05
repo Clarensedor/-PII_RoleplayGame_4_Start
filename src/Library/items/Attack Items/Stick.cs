@@ -1,7 +1,9 @@
 namespace RoleplayGame
 {
+
     public class Stick: IAttackItem
     {
+
         public int AttackValue 
         {
             get
