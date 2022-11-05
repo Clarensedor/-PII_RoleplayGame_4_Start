@@ -1,14 +1,12 @@
 namespace RoleplayGame
 {
-
-    public class Stick: IAttackItem
+    public class Shiv: IAttackItem
     {
-
         public int AttackValue 
         {
             get
             {
-                return 5;
+                return 15;
             } 
         }
     }

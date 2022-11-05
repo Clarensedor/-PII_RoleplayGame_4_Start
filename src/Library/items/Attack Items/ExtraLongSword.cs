@@ -3,8 +3,8 @@ namespace RoleplayGame
     public class ExtraLongSword: IAttackItem, IItemWithNotch
     {
 
-        public IGemstone gemstoneNotch {get; set;}
-        public bool gemstoneNotchIsUsed {get; set;}
+        public IGemstone gemNotch {get; set;}
+        public bool gemstoneNotchIsUsed {get;set;}
         public int AttackValue 
         {
             get
@@ -17,14 +17,14 @@ namespace RoleplayGame
         }
 
         public void AttachGem(IGemstone gem){
-            
-            this.gemstoneNotch = gem;
+            this.gemNotch = gem;
             this.AttackValue += gem.value;
+            this.gemstoneNotchIsUsed = true;
 
         }
 
         public void DeAttachGem(){
-            this.AttackValue -= gemstoneNotch.value;
+            this.AttackValue -= gemNotch.value;
             this.gemstoneNotch = null;
 
         }

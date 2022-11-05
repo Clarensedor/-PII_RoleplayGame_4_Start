@@ -5,8 +5,8 @@ namespace RoleplayGame
     /// </summary>
     public interface IItemWithNotch: IItem
     {
-        public bool gemstoneNotchIsUsed {get; set;}
-        public IGemstone gemstoneNotch {get; set;}
+        public bool gemstoneNotchIsUsed {get;set;}
+        public IGemstone gemNotch {get; set;}
         void AttachGem(IGemstone gem);
         void DeAttachGem();
         

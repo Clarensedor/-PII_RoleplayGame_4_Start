@@ -1,0 +1,33 @@
+namespace RoleplayGame
+{
+    /// <summary>
+    /// Tipos de elementos
+    /// </summary>
+    public enum CompoundItems
+    {
+        PrisonSpear = 1,
+        
+    }
+
+    /// <summary>
+    /// Creador de elementos. 
+    /// </summary>
+    public class CompoundItemFactory
+    {
+        /// <summary>
+        /// Permite crear elementos dado un tipo de elemento.
+        /// </summary>
+        /// <param name="type">El tipo de elemento</param>
+        /// <returns>El elemento</returns>
+        public static ICompoundItem CraftItem(CompoundItems item, IItem item1, IItem item2)
+        {
+            switch (item)
+            {
+                case CompoundItems.PrisonSpear: return new PrisonSpear(item1,item2 );
+                 
+
+                default: return null;
+            }
+        }
+    }
+}
