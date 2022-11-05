@@ -34,30 +34,30 @@ public List<IItem> items;
             return _instance;
         }
 */
-        public void AddItem(IItem cat){
+        public void AddItem(IItem item){
 
-            items.Add(cat);            
+            items.Add(item);            
         }
 
-        public void ModifyCategory(int idModificar, Categorie cat){
+        public void ModifyCategory(int idModificar, IItem item){
             
-            for (int i = 0; i < categories.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                if(categories[i].id == idModificar){
-                    cat.servicesInCategory = categories[i].servicesInCategory;
-                    categories[i] = cat;
+                if(items[i].id == idModificar){
+                    items[i] = item;
                 }
             }
         }
 
         public void DeleteCategory(int idModificar){
 
-            for (int i = 0; i < categories.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                if(categories[i].id == idModificar){
-                    categories.RemoveAt(i);
+                if(items[i].id == idModificar){
+                    items.RemoveAt(i);
                 }
             }
 
         } 
+}
 }
