@@ -5,7 +5,6 @@ namespace RoleplayGame
     /// </summary>
     public class Robes : IDefenseItem
     {
-         int id = 11;
         /// <summary>
         /// El poder de defensa.
         /// </summary>
@@ -17,6 +16,15 @@ namespace RoleplayGame
                 return 2;
             }
         }
+
+        public int id
+        {
+            get
+            {
+                return 11;
+            }
+        }
+
 
         public override string ToString()
         {
