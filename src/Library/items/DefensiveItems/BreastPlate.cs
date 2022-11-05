@@ -1,13 +1,13 @@
 namespace RoleplayGame
 {
-    public class Helmet: IDefenseItem
+    public class BreastPlate : IDefenseItem
     {
-         int id = 10;
+         int id = 9;
         public int DefenseValue
         {
             get
             {
-                return 18;
+                return 30;
             }
         }
     }
