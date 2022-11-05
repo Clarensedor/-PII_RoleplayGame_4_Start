@@ -2,6 +2,7 @@ namespace RoleplayGame
 {
     public class PrisonSpear: IAttackItem, ICompoundItem
     {
+        int id = 4;
 
         public  IItem item1 {get;}
         public IItem item2{get;}

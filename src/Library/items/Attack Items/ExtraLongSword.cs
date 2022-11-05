@@ -2,6 +2,7 @@ namespace RoleplayGame
 {
     public class ExtraLongSword: IAttackItem, IItemWithNotch
     {
+        int id = 3;
 
         public IGemstone gemstoneNotch {get; set;}
         public bool gemstoneNotchIsUsed {get; set;}
@@ -17,7 +18,7 @@ namespace RoleplayGame
         }
 
         public void AttachGem(IGemstone gem){
-            
+
             this.gemstoneNotch = gem;
             this.AttackValue += gem.value;
 
