@@ -36,27 +36,17 @@ namespace RoleplayGame.Scenarios
 
        }
 
-<<<<<<< Updated upstream
-       public void Run(){
-=======
 
       // tenemos que simular todo lo que hacemos en program aca 
        public void Run(){
 
 
-        //para generar numeros aleatorios:
+        //Con esto generamos numeros aleatorios para seleccionar id de ITEMS:
 
-          int min = 1;
-          int max = 15;
-  
           Random rnd = new Random();
-          int aleatorio = rnd.Next(min, max + 1);
+          int aleatorio = rnd.Next(1, 15 + 1);
            
-
-
-
->>>>>>> Stashed changes
-          characters[0].ReceiveAttack(characters[1]);
+         // characters[aleatorio].ReceiveAttack(characters[1]);
           
 
         }
