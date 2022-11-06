@@ -16,7 +16,6 @@ namespace RoleplayGame
             }
         }
 
-
         public int id 
         {
             get
