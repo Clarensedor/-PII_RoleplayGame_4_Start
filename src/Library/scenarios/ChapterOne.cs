@@ -87,21 +87,7 @@ namespace RoleplayGame.Scenarios
         // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
 
       }
-
-       public void Run()
-       {
-           
-         // characters[aleatorio].ReceiveAttack(characters[1]);
-
-        pintonio.AddItem(random4);
-        pintonio.AddItem(random4);
-
-        // nos falta aca ver el que sobrevive de cada pelea
-        // USAR LA CLASE ENCOUNTER PARA VER LA PELEA ENTRE DOS PERSONAJES
-        // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
-
-      }
-
+      
        public void Run(Encounters.EncounterType type,Character martincito, Character pintonio, Character juancito, Character antoncito)
        {
          // Batalla entre Personaje 1 y Personaje 2:
