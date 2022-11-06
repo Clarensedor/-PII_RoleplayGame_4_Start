@@ -35,6 +35,7 @@ namespace RoleplayGame.Scenarios
         //Con esto generamos numeros aleatorios para seleccionar id de ITEMS:
         Random rnd = new Random();
 
+
         // Aca se crea un numero segun el indice de la lista Items, que van desde el 1 al 15
         int randIndex = rnd.Next(items.Count);
         int randIndex2 = rnd.Next(items.Count);
@@ -91,6 +92,34 @@ namespace RoleplayGame.Scenarios
        {
            
          // characters[aleatorio].ReceiveAttack(characters[1]);
+
+        pintonio.AddItem(random4);
+        pintonio.AddItem(random4);
+
+        // nos falta aca ver el que sobrevive de cada pelea
+        // USAR LA CLASE ENCOUNTER PARA VER LA PELEA ENTRE DOS PERSONAJES
+        // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
+
+      }
+
+       public void Run(Encounters.EncounterType type,Character martincito, Character pintonio, Character juancito, Character antoncito)
+       {
+         // Batalla entre Personaje 1 y Personaje 2:
+
+           Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,martincito,pintonio);
+
+        // Ver quien gana de los dos:
+
+
+
+        //Se cura totalmente: ///necesito hacer el metodo para curarse en character
+
+       // Character supermartincito = martincito.Health 
+
+
+         // Batalla entre Personaje 1 y Personaje 2:
+
+           Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,juancito,antoncito);
 
 
        }
