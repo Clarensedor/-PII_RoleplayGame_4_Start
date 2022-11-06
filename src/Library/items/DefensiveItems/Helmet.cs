@@ -2,7 +2,7 @@ namespace RoleplayGame
 {
     public class Helmet: IDefenseItem
     {
-         int id = 10;
+
         public int DefenseValue
         {
             get
@@ -10,5 +10,15 @@ namespace RoleplayGame
                 return 18;
             }
         }
+
+        public int id
+        {
+            get
+            {
+                return 8;
+            }
+        }
+
+
     }
 }
