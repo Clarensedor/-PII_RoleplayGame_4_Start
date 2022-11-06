@@ -64,24 +64,6 @@ namespace RoleplayGame.Scenarios
         pintonio.AddItem(random4);
 
 
-        // aca pelean hasta que uno de los dos tengan 0 de vida
-
-        while(martinsito.Health > 0 || antoncito.Health > 0)
-        {
-        
-          martinsito.ReceiveAttack(antoncito.AttackPower);
-          antoncito.ReceiveAttack(martinsito.AttackPower);
-
-        }
-
-        while(juancito.Health > 0 || pintonio.Health > 0)
-        {
-
-        juancito.ReceiveAttack(pintonio.AttackPower);
-        pintonio.ReceiveAttack(juancito.AttackPower);
-
-        }
-
         // nos falta aca ver el que sobrevive de cada pelea
         // USAR LA CLASE ENCOUNTER PARA VER LA PELEA ENTRE DOS PERSONAJES
         // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
@@ -104,6 +86,7 @@ namespace RoleplayGame.Scenarios
 
 
          // Batalla entre Personaje 1 y Personaje 2:
+
 
            Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,juancito,antoncito);
 
