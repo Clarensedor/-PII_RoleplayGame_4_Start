@@ -34,11 +34,28 @@ namespace RoleplayGame.Scenarios
          //int numeroAleatorio = random.Next(0, );
          //Martinsito.AddItem(numeroAletorio);
 
-
-
        }
 
+<<<<<<< Updated upstream
        public void Run(){
+=======
+
+      // tenemos que simular todo lo que hacemos en program aca 
+       public void Run(){
+
+
+        //para generar numeros aleatorios:
+
+          int min = 1;
+          int max = 15;
+  
+          Random rnd = new Random();
+          int aleatorio = rnd.Next(min, max + 1);
+           
+
+
+
+>>>>>>> Stashed changes
           characters[0].ReceiveAttack(characters[1]);
           
 
