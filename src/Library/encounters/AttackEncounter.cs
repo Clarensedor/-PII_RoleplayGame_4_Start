@@ -8,9 +8,9 @@ namespace RoleplayGame.Encounters
     /// </summary>
     public class AttackEncounter : Encounter
     {
-        public AttackEncounter(Character one, Character two)
-            : base(one, two)
+        public AttackEncounter(Character one, Character two) : base(one, two)
         {
+            
         }
 
         /// <summary>

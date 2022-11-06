@@ -52,7 +52,5 @@ namespace RoleplayGame.Scenarios
         }
 
     }
-
-
 }
 
