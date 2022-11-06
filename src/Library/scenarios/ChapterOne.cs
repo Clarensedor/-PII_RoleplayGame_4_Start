@@ -36,9 +36,6 @@ namespace RoleplayGame.Scenarios
 
        }
 
-<<<<<<< Updated upstream
-       public void Run(){
-=======
 
       // tenemos que simular todo lo que hacemos en program aca 
        public void Run(){
@@ -52,17 +49,7 @@ namespace RoleplayGame.Scenarios
           Random rnd = new Random();
           int aleatorio = rnd.Next(min, max + 1);
            
-
-
-
->>>>>>> Stashed changes
-          characters[0].ReceiveAttack(characters[1]);
-          
-
-        }
-
+         }
     }
-
-
 }
 
