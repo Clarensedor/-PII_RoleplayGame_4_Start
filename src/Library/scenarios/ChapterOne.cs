@@ -38,6 +38,8 @@ namespace RoleplayGame.Scenarios
 
        }
 
+
+      // tenemos que simular todo lo que hacemos en program aca 
        public void Run(){
           characters[0].ReceiveAttack(characters[1]);
           
