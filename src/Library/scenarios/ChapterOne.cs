@@ -9,9 +9,6 @@ namespace RoleplayGame.Scenarios
       public List<Character> characters;
       public List<IItem> items;
 
-
-
-
        public void Setup(){
 
 
@@ -23,7 +20,7 @@ namespace RoleplayGame.Scenarios
 
         
         //crea las instancias de items del items factory
-        
+
         var stick = ItemFactory.GetItem(ItemType.Robes);
        
         //agrego los character a la lista
@@ -66,15 +63,37 @@ namespace RoleplayGame.Scenarios
         pintonio.AddItem(random4);
 
 
+        // aca pelean hasta que uno de los dos tengan 0 de vida
 
-       }
-
-       public void Run(){
-           
-         // characters[aleatorio].ReceiveAttack(characters[1]);
-          
+        while(martinsito.Health > 0 || antoncito.Health > 0)
+        {
+        
+          martinsito.ReceiveAttack(antoncito.AttackPower);
+          antoncito.ReceiveAttack(martinsito.AttackPower);
 
         }
+
+        while(juancito.Health > 0 || pintonio.Health > 0)
+        {
+
+        juancito.ReceiveAttack(pintonio.AttackPower);
+        pintonio.ReceiveAttack(juancito.AttackPower);
+
+        }
+
+        // nos falta aca ver el que sobrevive de cada pelea
+        // USAR LA CLASE ENCOUNTER PARA VER LA PELEA ENTRE DOS PERSONAJES
+        // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
+
+      }
+
+       public void Run()
+       {
+           
+         // characters[aleatorio].ReceiveAttack(characters[1]);
+
+
+       }
 
     }
 }
