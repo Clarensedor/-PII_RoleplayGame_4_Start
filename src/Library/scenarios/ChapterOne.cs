@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using RoleplayGame.Characters;
+using RoleplayGame.Encounters;
 
 namespace RoleplayGame.Scenarios
 {
@@ -9,7 +10,12 @@ namespace RoleplayGame.Scenarios
       public List<Character> characters;
       public List<IItem> items;
 
+      public List<AttackEncounter> battles;
+
        public void Setup(){
+        characters = new List<Character>();
+         items = new List<IItem>();
+          battles = new List<AttackEncounter>();
 
 
         //creamos las tres instancias de characters del character factory
@@ -21,7 +27,22 @@ namespace RoleplayGame.Scenarios
         
         //crea las instancias de items del items factory
 
-        var stick = ItemFactory.GetItem(ItemType.Robes);
+        
+        var axe = ItemFactory.GetItem(ItemType.Axe);
+        var bow = ItemFactory.GetItem(ItemType.Bow);
+        var els = ItemFactory.GetItem(ItemType.ExtraLongSword);
+        var pg = ItemFactory.GetItem(ItemType.PowerGlove);
+        var shiv = ItemFactory.GetItem(ItemType.Shiv);
+        var stone = ItemFactory.GetItem(ItemType.Stone);
+        var sword = ItemFactory.GetItem(ItemType.Sword);
+
+        items.Add(axe);
+        items.Add(bow);
+        items.Add(els);
+        items.Add(pg);
+        items.Add(shiv);
+        items.Add(stone);
+        items.Add(sword);
        
         //agrego los character a la lista
         characters.Add(martinsito);
@@ -33,14 +54,14 @@ namespace RoleplayGame.Scenarios
         //int numeroAleatorio = random.Next(0, );
 
         //Con esto generamos numeros aleatorios para seleccionar id de ITEMS:
-        Random rnd = new Random();
+        Random rnd = new Random(7);
 
 
         // Aca se crea un numero segun el indice de la lista Items, que van desde el 1 al 15
-        int randIndex = rnd.Next(items.Count);
-        int randIndex2 = rnd.Next(items.Count);
-        int randIndex3 = rnd.Next(items.Count);
-        int randIndex4 = rnd.Next(items.Count);
+        int randIndex = rnd.Next(0, items.Count );
+        int randIndex2 = rnd.Next(0, items.Count);
+        int randIndex3 = rnd.Next(0, items.Count);
+        int randIndex4 = rnd.Next(0 ,items.Count);
 
         // Aca lo que se hace, es seleccionar un item segun el randIndex creado anteriormente
 
@@ -63,33 +84,62 @@ namespace RoleplayGame.Scenarios
         pintonio.AddItem(random4);
         pintonio.AddItem(random4);
 
+        var firstBattle =  Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,this.characters[0],this.characters[1]);
+        Console.WriteLine("32 H " + firstBattle.Character1.Name);
+        try
+        {
+          
+          this.battles.Add(firstBattle as AttackEncounter);
+        }
+         catch (NullReferenceException e) {
+          
+          Console.WriteLine(" 33" + e);
 
+         } 
+        var secondBattle =  Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,this.characters[2],this.characters[3]);
+        try
+        {
+          
+          this.battles.Add(secondBattle as AttackEncounter);
+        }
+         catch (NullReferenceException e) {
+          
+          Console.WriteLine("34" + e);
+
+         } 
         // nos falta aca ver el que sobrevive de cada pelea
         // USAR LA CLASE ENCOUNTER PARA VER LA PELEA ENTRE DOS PERSONAJES
         // USAR EXCHANGE ENCOUNTER PARA QUE EQUIPEN LOS ITEMS RANDOM QUE HEMOS GENERADOS
 
       }
       
-       public void Run(Encounters.EncounterType type,Character martincito, Character pintonio, Character juancito, Character antoncito)
+       public void Run()
        {
-         // Batalla entre Personaje 1 y Personaje 2:
+         // Batalla entre Personaje 1 y Personaje 2 y 3 y 4;
 
-           Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,martincito,pintonio);
+        battles[0].DoEncounter();
+        battles[1].DoEncounter();
 
-        // Ver quien gana de los dos:
+        var thirdBattle = Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack , battles[0].Winner(), battles[1].Winner());
+        battles.Add(thirdBattle as AttackEncounter);
+        battles[2].DoEncounter();
+        Console.WriteLine("El rey de la Tierra Media es: " +  battles[2].Winner().Name);
+        
+
+       
+        
+       
 
 
 
-        //Se cura totalmente: ///necesito hacer el metodo para curarse en character
+        
 
-       // Character supermartincito = martincito.Health 
-
-
-         // Batalla entre Personaje 1 y Personaje 2:
+     
 
 
-           Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,juancito,antoncito);
+      
 
+      
 
        }
 
