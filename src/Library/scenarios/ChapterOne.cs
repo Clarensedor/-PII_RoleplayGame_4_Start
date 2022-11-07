@@ -85,7 +85,7 @@ namespace RoleplayGame.Scenarios
         pintonio.AddItem(random4);
 
         var firstBattle =  Encounters.EncounterFactory.GetEncounter (Encounters.EncounterType.Attack ,this.characters[0],this.characters[1]);
-        Console.WriteLine("32 H " + firstBattle.Character1.Name);
+        Console.WriteLine(firstBattle.Character1.Name);
         try
         {
           
@@ -125,24 +125,7 @@ namespace RoleplayGame.Scenarios
         battles[2].DoEncounter();
         Console.WriteLine("El rey de la Tierra Media es: " +  battles[2].Winner().Name);
         
-
-       
-        
-       
-
-
-
-        
-
-     
-
-
-      
-
-      
-
        }
-
     }
 }
 
