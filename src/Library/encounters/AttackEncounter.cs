@@ -43,6 +43,25 @@ namespace RoleplayGame.Encounters
                 this.Reporter.ReportDead(this.Character1);
             }
         }
+        
+
+        public Character Winner(){
+
+            if(this.Character1.IsDead){
+
+                return  Character2;
+            }
+            else if(this.Character2.IsDead){
+
+                return Character1;
+            }
+            else{
+
+                throw new ArrayTypeMismatchException();
+            }
+        }
+
+        
 
         /// <summary>
         /// Retorna verdadero si ambos personajes están vivos.

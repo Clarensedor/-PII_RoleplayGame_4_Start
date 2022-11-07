@@ -7,6 +7,15 @@ namespace RoleplayGame
     {
         Magic = 1,
         Robes = 2,
+
+        Axe = 3,
+        Bow = 4,
+        ExtraLongSword = 5,
+        PowerGlove = 6,
+        Shiv = 7,
+        Stone = 8,
+        Sword = 9,
+        
     }
 
     /// <summary>
@@ -25,6 +34,13 @@ namespace RoleplayGame
             {
                 case ItemType.Magic: return new Magic();
                 case ItemType.Robes: return new Robes();
+                case ItemType.Axe: return new Axe();
+                case ItemType.Stone: return new Stone();
+                case ItemType.Bow: return new Bow();
+                case ItemType.Shiv: return new Shiv();
+                case ItemType.ExtraLongSword: return new ExtraLongSword();
+                case ItemType.PowerGlove: return new PowerGlove();
+                
 
                 default: return null;
             }
