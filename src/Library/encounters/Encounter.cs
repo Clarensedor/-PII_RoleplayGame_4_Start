@@ -23,5 +23,6 @@ namespace RoleplayGame.Encounters
         /// Ejecución del encuentro.
         /// </summary>
         public abstract void DoEncounter();
+
     }
 }
